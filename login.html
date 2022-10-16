@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style_LP.css" />
+  </head>
+  <body>
+    <section id="header">
+      <a href="#"><img src="img/logo.png" class="logo" alt="Cara" /></a>
+
+      <div>
+        <ul id="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a class="active" href="login.html">Login</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="account-page">
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            <div class="form-container">
+              <div class="form-btn">
+                <span onclick="login()">Login</span>
+                <span onclick="register()">Register</span>
+                <hr id="Indicator" />
+              </div>
+
+              <form id="LoginForm" action="index.html">
+                <input id="name" type="text" placeholder="Username" />
+                <input id="password" type="password" placeholder="Password" />
+
+                <button type="submit" class="btn">Login</button>
+                <a href="#">Forget password</a>
+              </form>
+
+              <form id="RegForm" action="index.html">
+                <input type="text" placeholder="Username" />
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Password" />
+                <button type="submit" class="btn">Register</button>
+              </form>
+              <a href="index.html">
+                <img
+                  src="./img/logo.png"
+                  alt=""
+                  style="margin-top: 265px; margin-left: 40px"
+                />
+              </a>
+            </div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var LoginForm = document.getElementById("LoginForm");
+      var RegForm = document.getElementById("RegForm");
+      var Indicator = document.getElementById("Indicator");
+
+      function register() {
+        RegForm.style.transform = "translateX(0px)";
+        LoginForm.style.transform = "translateX(0px)";
+        Indicator.style.transform = "translateX(120px)";
+      }
+      function login() {
+        RegForm.style.transform = "translateX(300px)";
+        LoginForm.style.transform = "translateX(300px)";
+        Indicator.style.transform = "translateX(0px)";
+      }
+    </script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="./firefox.js"></script>
+  </body>
+</html>
